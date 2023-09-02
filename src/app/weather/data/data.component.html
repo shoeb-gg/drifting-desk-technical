@@ -1,0 +1,12 @@
+<section class="h-full">
+    <div>
+        <label for="lat">Latitude:</label>
+        <input class="border-2 border-red-500" type="text" name="lat" id="" [(ngModel)]="lat" />
+    </div>
+    <div>
+        <label for="long">Longitude:</label>
+        <input class="border-2 border-red-500" type="text" name="long" id="" [(ngModel)]="long" />
+    </div>
+
+    <button (click)="getWeatherData()" class="border-2 border-green-500">Get Data</button>
+</section>

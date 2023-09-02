@@ -1,0 +1,24 @@
+<!-- <section class="h-[10vh] overflow-y-scroll">
+    <div>Feels Like: {{ weatherData?.feels_like }}</div>
+    <div>Ground Level: {{ weatherData?.grnd_level }}</div>
+    <div>Humidity: {{ weatherData?.humidity }} %</div>
+    <div>Pressure: {{ weatherData?.pressure }}</div>
+    <div>Sea Level: {{ weatherData.sea_level }}</div>
+    <div>Temperature: {{ weatherData.temp }}</div>
+    <div>Temperature(Max): {{ weatherData.temp_max }}</div>
+    <div>Temperature(Min): {{ weatherData.temp_min }}</div>
+</section> -->
+
+<cdk-virtual-scroll-viewport [itemSize]="300" class="h-[40vh] w-full cdk-viewport mt-10">
+    <!-- <div *cdkVirtualFor="let data of weatherData; trackBy: trackByFn"> -->
+    <div *cdkVirtualFor="let data of weatherData">
+        <div>Feels Like: {{ data?.feels_like }}</div>
+        <div>Ground Level: {{ data?.grnd_level }}</div>
+        <div>Humidity: {{ data?.humidity }} %</div>
+        <div>Pressure: {{ data?.pressure }}</div>
+        <div>Sea Level: {{ data?.sea_level }}</div>
+        <div>Temperature: {{ data?.temp }}</div>
+        <div>Temperature(Max): {{ data?.temp_max }}</div>
+        <div class="mb-5">Temperature(Min): {{ data?.temp_min }}</div>
+    </div>
+</cdk-virtual-scroll-viewport>
